@@ -55,11 +55,11 @@ ul{
 img{
     display: block;
 }
-.main-nav{
-    display: flex;
-    align-items: center;
-
+.section{
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+
 .logo{
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -80,13 +80,14 @@ img{
 .header-nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .menu_button{
 display: inline-flex;
 align-items: center;
-margin-left: auto;
 padding-top: 24px;
 padding-bottom: 24px;
+margin-left: auto;
 border: none;
 stroke: var(--accent-color);
 background-color: transparent;  
@@ -157,97 +158,15 @@ margin-bottom: 20px;
     gap: 56px;
     margin-top: 48px;
 }
-/* .menu_button .icon_cross{
-    display: none;
-}
-.menu_button.is-open .icon_cross{
-    display: block;
-}
-.menu_button.is-open .icon_menu{
-    display: none;
-} */
-
 .header-list{
     display: none;
 }
 .contacts{
     display: none
 }
-/* .item{
-    position: relative;
-}
-.current::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--hover-fokus-color);
-}
-.header-item{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.current{
-    color: var(--hover-fokus-color);
-}
-.header-nav .header-item:hover,
-.header-nav .header-item:focus{
-    color: var(--hover-fokus-color);
- }
-    .header-list{
-        display: flex;
-        margin-left: 76px;
-    }
-    .header-list .item + .item{
-        margin-left: 40px;
-    }
-.header-list .link{
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-
-}
-.contacts-address{
-    font-style: normal;
-}
-.contacts .contact-li:hover,
-.contacts .contact-li:focus{
-    color: var(--hover-fokus-color);
-}
-
-.contacts .item + .item{
-    margin-left: 40px;
-}
-    .contacts{
-        display: flex;
-        margin-right: auto;
-    }
-    .contact-li{
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--primary-text-color);
-
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-   
     /*--------------Main banner------------------*/
     .banner{
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
         background-color: var(--accent-color);
         background-image: var(--grad), url(../images/banner-mob.jpg);
         background-repeat: no-repeat;
@@ -255,7 +174,6 @@ margin-bottom: 20px;
         background-size: cover;
         padding-top: 112px;
         padding-bottom: 112px;
-        margin-bottom: 96px;
     }
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -276,10 +194,6 @@ margin-bottom: 20px;
         margin-right: auto;
         color: var(--white);
     }
-    /* .banner .banner-btn:hover,
-    .banner .banner-btn:focus{
-    background-color: var(--hover-fokus-color);
-    } */
     .banner-btn{
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
@@ -298,26 +212,22 @@ margin-bottom: 20px;
         cursor: pointer;
         display: block;
 
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    } */
-    /*----------------About company-----------------*/
-    .company{
-        padding-top: 120px;
-        padding-bottom: 120px;
+        /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     }
+    /*----------------About company-----------------*/
+
     .about-company{
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 72px;
     }
-    .xxxx{
+    .company_li{
         width: 100%;
     }
     .icon{
         display: none;
     }
     .guality-company{
-        align-items: center;
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
@@ -325,8 +235,6 @@ margin-bottom: 20px;
         width: 396px;
         height: 40px;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 8px; 
     }
     .guality-comp-descr{
@@ -334,7 +242,6 @@ margin-bottom: 20px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         width: 100%;
-        height: 48px;
         /* width: 264px;
         height: 72px; */
         color: var(--primary-text-color);
@@ -345,11 +252,10 @@ margin-bottom: 20px;
     }
     /*------------------Our team---------------------*/
     .team{
-        padding-top: 120px;
-        padding-bottom: 110px;
         background-color: var(--light-color);
     }
     .our-team{ 
+        text-align: center;
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
@@ -357,10 +263,14 @@ margin-bottom: 20px;
         margin-bottom: 72px;
         text-transform: capitalize;
     }
-    .list-team{
+    .team_ul{
         display: flex;
-        width: calc((100% - 72px) / 4);
-        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 72px;
+    }
+    .our_team_li{
+        width: 100%;
     }
     .data{
         padding-top: 32px;
@@ -404,9 +314,9 @@ margin-bottom: 20px;
         fill: var(--light-color);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-        .team-soc-link:hover{
+        /* .team-soc-link:hover{
         background-color: var(--hover-fokus-color);
-    }
+    } */
     /*----------------Customers--------------------*/
     .customers{
         padding-top: 120px;
@@ -882,11 +792,10 @@ margin-bottom: 20px;
         pointer-events: none;
     }
 
-/* -Modification:- */
-
-/* ------------------Mobile------------------------- */
+/* ---------------Modification:--------------------- */
+/* ################################################# */
+/* ------------------MOBILE------------------------- */
  .container{
-    width: 100%;
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
@@ -896,16 +805,20 @@ margin-bottom: 20px;
     .container{
         width: 428px;
     }
-
 }
-    
-/* ------------------Table-------------------------- */
+/* ################################################## */
+/* --------------------TABLE-------------------------- */
 @media screen and (min-width: 768px) {
    .container{
     width: 768px; 
 }
 .menu_button{
     display: none;
+}
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .item{
     position: relative;
@@ -937,7 +850,7 @@ margin-bottom: 20px;
  }
     .header-list{
         display: flex;
-        margin-left: 76px;
+        margin-left: 120px;
     }
     .header-list .item + .item{
         margin-left: 40px;
@@ -960,25 +873,21 @@ margin-bottom: 20px;
     color: var(--hover-fokus-color);
 }
 
-.contacts .item + .item{
-    margin-left: 40px;
-}
     .contacts{
         display: flex;
-        margin-right: auto;
+        flex-direction: column;
+        gap: 12px;
     }
     .contact-li{
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.04em;
         color: var(--primary-text-color);
-
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .banner{
+  /*--------------- Main banner-------------------- */
+    .banner{
             width: 100%;
-            margin-left: auto;
-            margin-right: auto;
             background-color: var(--accent-color);
             background-image: var(--grad), url(../images/banner-tab.jpg);
             background-repeat: no-repeat;
@@ -986,7 +895,6 @@ margin-bottom: 20px;
             background-size: cover;
             padding-top: 112px;
             padding-bottom: 112px;
-            margin-bottom: 96px;
         }
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -995,27 +903,62 @@ margin-bottom: 20px;
     background-image: var(--grad), url(../images/banner-tab2x.jpg);
     }
 }
-.guality-company{
+.banner-title{
+    width: 496px;
+    height: 120px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
+    font-size: 56px;
+    line-height: 1.07;
     letter-spacing: 0.02em;
-    margin-bottom: 8px;
-    margin-right: auto;
+ }   
+/* -----------------About company-------------------- */
+.guality-company{
+    text-align: start;
 }
-    .xxxx{
-    width: calc((100% - 24px)/2);
+.company_li{
+    width: calc((100% - 24px) / 2);
 }
-/* -------------------Desktop------------------------- */
 }
+/* ---------------Our team------------------------- */
+/* ---------------Customers------------------------ */
+/* -----------------Footer------------------------- */
+/* ##################################################### */
+/* -------------------DESKTOP------------------------- */
 @media screen and (min-width: 1200px) {
     .container{
         width: 1158px;
+        padding: 0;
     }
+    .section{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        border: 1px solid red;
+    }
+    .contacts .item + .item{
+    margin-left: 40px;
+}
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-list{
+    margin-left: 76px;
+}
+.contacts{
+    flex-direction: row;
+    margin-left: auto;
+}
+.contact-li{
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+/* ----------------Main banner---------------------- */
     .banner{
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
         background-color: var(--accent-color);
         background-image: var(--grad), url(../images/banner-d.jpg);
         background-repeat: no-repeat;
@@ -1023,7 +966,6 @@ margin-bottom: 20px;
         background-size: cover;
         padding-top: 188px;
         padding-bottom: 188px;
-        margin-bottom: 96px;
     }
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -1032,29 +974,32 @@ margin-bottom: 20px;
     background-image: var(--grad), url(../images/banner-d2x.jpg);
 }
     }
-    .xxxx{
+/* ---------------About company--------------------- */
+.about-company{
+    gap: 24px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: var(--light-color);
+    cursor: pointer;
+}    
+.company_li{
         width: calc((100% - 72px) / 4);
     }
     .guality-company{
-        margin-left: 0;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
-        margin-bottom: 8px; 
     }
-    .icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 112px;
-        margin-bottom: 8px;
-        background-color: var(--light-color);
-        cursor: pointer;
-    }
+
+/* ------------What are we doing-------------------*/
     .doing{
         display: flex;
-        padding-bottom: 120px;
     }
     .doing-title{
         text-align: center;
@@ -1063,26 +1008,20 @@ margin-bottom: 20px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-        margin-bottom: 72px;
     }
     .doing-imgs{
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
     } 
 }
-/* -------------------Double--------------------------- */
-@media screen and (min-width: 480px), (min-width: 768px){
-
+/* ---------------Our team------------------------- */
+.team_ul{
+    gap: 24px;
 }
-@media screen and (min-width: 768px), (min-width: 1200px) {
- .banner-title{
-    width: 496px;
-    height: 120px;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
- }   
+.our_team_li{
+    width: calc((100% - 72px) / 4);
 }
+/* ---------------Customers------------------------ */
+/* -----------------Footer------------------------- */
 
