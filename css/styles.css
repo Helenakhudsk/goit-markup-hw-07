@@ -136,7 +136,9 @@ margin-bottom: 20px;
     letter-spacing: 0.02em;
     color: var(--accent-color);
 }
-
+.current{
+    color: var(--hover-fokus-color)
+}
 .contacts-address{
     font-style: normal;
 }
@@ -144,6 +146,7 @@ margin-bottom: 20px;
     margin-bottom: 40px;
 }
 .menu-phone{
+    width: 100%;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -157,7 +160,7 @@ margin-bottom: 20px;
 }
 .menu-socs{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 56px;
     margin-top: 48px;
 }
@@ -266,7 +269,7 @@ margin-bottom: 20px;
         flex-wrap: wrap;
         gap: 72px;
     }
-    .our_team_li{
+    .team_li{
         width: 100%;
     }
     .data{
@@ -293,8 +296,7 @@ margin-bottom: 20px;
     }
     .team-list{
         display: flex;
-        justify-content: center;
-        gap: 24px;
+        justify-content: space-around;
     }
     .team-soc-item{
         width: 40px;
@@ -311,11 +313,7 @@ margin-bottom: 20px;
         fill: var(--light-color);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-        .team-soc-link:hover{
-        background-color: var(--hover-fokus-color);
-        }
     /*----------------Customers--------------------*/
-
     .title-customers{
         font-weight: 700;
         font-size: 36px;
@@ -467,10 +465,10 @@ margin-bottom: 20px;
     }
     .footer-container{
         text-align: center;
-        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 268px;
         margin-bottom: 72px;
-        padding-left: 64px;
-        padding-right: 64px;
     }
     .logo-footer{
         font-family: 'Raleway', sans-serif;
@@ -539,9 +537,7 @@ margin-bottom: 20px;
     }
     .footer-sub-box{
         display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+        flex-wrap: wrap;
     }
     .title-lab{
         font-weight: 500;
@@ -613,7 +609,7 @@ margin-bottom: 20px;
     }
     .modal{ 
         position: absolute;
-        width: 408px;
+        width: 392px;
         background-color: var(--white);
         border-radius: 4px;
         top: 50%;
@@ -931,6 +927,10 @@ margin-bottom: 20px;
 .our_team_li{
     width: calc((100% - 24px) / 2);
 }
+.team-list{
+    justify-content: center;
+    gap: 24px;
+}
 /* ---------------Customers------------------------ */
 .customers{
     padding-right: 108px;
@@ -949,10 +949,10 @@ margin-bottom: 20px;
     gap: 24px;
     }
     .footer-container{
+    margin-right: unset;
+    margin-left: unset;
     text-align: start;
     width: 264px;
-    padding-left: unset;
-    padding-right: unset;
     }
     .footer-soc{
     margin-left: unset;
@@ -963,22 +963,27 @@ margin-bottom: 20px;
     text-align: start;
     }
     .footer-sub-box{
-    margin-left: unset;
-    margin-right: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
     }
     .title-lab{
         margin-left: unset;
     }
     .footer-input{
     width: 264px;
+    margin-bottom: unset;
     }
     .footer-sub-form{
     flex-direction: row;
-    gap: 0;
+    width: 453px;
     }
     .footer_buttom{
+        margin-right: unset;
     margin-left: 24px;
     }
+    .modal{ 
+        width: 408px;
+}
 }
 /* ##################################################### */
 /* -------------------DESKTOP------------------------- */
@@ -1033,7 +1038,9 @@ margin-bottom: 20px;
 }
 /* ----------------Main banner---------------------- */
     .banner{
-        width: 100%;
+        width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
         background-color: var(--accent-color);
         background-image: var(--grad), url(../images/banner-d.jpg);
         padding-top: 188px;
@@ -1146,6 +1153,12 @@ margin-left: 120px;
 .footer-sub-box{
     margin-left: auto;
     margin-right: unset;
+}
+.footer_buttom{
+    margin-right: unset;
+}
+.footer-input{
+    margin-bottom: unset;
 }
 .footer-sub-box .footer_buttom:hover,
 .footer-sub-box .footer_buttom:focus{
