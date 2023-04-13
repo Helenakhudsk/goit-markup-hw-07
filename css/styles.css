@@ -30,6 +30,9 @@ body{
     overflow: hidden;
   }
 /*-----------------header--------------------*/
+.header{
+    border-bottom: 2px solid var(--text-footer);
+}
 .link{
     text-decoration: none;
 }
@@ -211,8 +214,6 @@ margin-bottom: 20px;
         border: none;
         cursor: pointer;
         display: block;
-
-        /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     }
     /*----------------About company-----------------*/
 
@@ -232,18 +233,15 @@ margin-bottom: 20px;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
-        width: 396px;
-        height: 40px;
         text-align: center;
         margin-bottom: 8px; 
     }
     .guality-comp-descr{
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         width: 100%;
-        /* width: 264px;
-        height: 72px; */
         color: var(--primary-text-color);
     }
     /*----------------What are we doing---------------*/
@@ -266,7 +264,6 @@ margin-bottom: 20px;
     .team_ul{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 72px;
     }
     .our_team_li{
@@ -314,14 +311,11 @@ margin-bottom: 20px;
         fill: var(--light-color);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-        /* .team-soc-link:hover{
+        .team-soc-link:hover{
         background-color: var(--hover-fokus-color);
-    } */
+        }
     /*----------------Customers--------------------*/
-    .customers{
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
+
     .title-customers{
         font-weight: 700;
         font-size: 36px;
@@ -333,32 +327,23 @@ margin-bottom: 20px;
     }
     .our-customers{
         display: flex;
-        gap: 24px;
+        flex-wrap: wrap;
+        gap: 72px 16px;
     }
     .box{
-        width: calc((100% - 120px) / 6);
+        width: calc((100% - 16px) / 2);
     }
     .box-icon{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
         height: 88px;
         border-radius: 4px;
         border: 1px solid #8E8F99;
         fill: var(--light-gray);
-
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .customer-icon{
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .box-icon:hover{
-        border-color: var(--hover-fokus-color);
-    }
-    .box-icon:hover .customer-icon{
-        fill: var(--hover-fokus-color)
-    }
-
     /*----------------portfolio--------------------*/
     /*------buttons------------*/
     .buttons-pictures{
@@ -474,15 +459,18 @@ margin-bottom: 20px;
         }
     /*-----------------footer--------------------*/
     .footer{
-        padding-top: 100px;
-        padding-bottom: 100px;
         background: var(--accent-color);
-    }
-    .footer-container{
-        width: 264px;
     }
     .logo-soc{
         display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-container{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 72px;
+        padding-left: 64px;
+        padding-right: 64px;
     }
     .logo-footer{
         font-family: 'Raleway', sans-serif;
@@ -498,22 +486,26 @@ margin-bottom: 20px;
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
         font-size: 18px;
-        line-height: 1,16;
+        line-height: 1.16;
         letter-spacing: 0.03em;
         color: var(--light-color);
     }
     .page-footer{
+        text-align: start;
         margin-top: 16px;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: var(--text-footer);
+        color: var(--light-color);
     }
     .footer-soc{
-        margin-left: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 72px;
     }
     .title-footer-soc{
+        text-align: center;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -546,25 +538,29 @@ margin-bottom: 20px;
         background-color: #31D0AA;
     }
     .footer-sub-box{
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
+        margin-right: auto;
     }
     .title-lab{
-        /* width: 75px;
-        height: 24px; */
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
         color: var(--white);
         }
     .footer-input{
-        width: 264px;
+        width: 100%;
         height: 40px;
-        border: 1px solid var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
         padding-left: 16px;
         padding-top: 8px;
         padding-bottom: 8px;
+        margin-bottom: 16px;
         color: var(--white);
         background-color: transparent;
         outline: transparent;
@@ -577,6 +573,8 @@ margin-bottom: 20px;
     }
     .footer-sub-form{
         display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
     .footer_buttom{
         display: flex;
@@ -587,7 +585,8 @@ margin-bottom: 20px;
         line-height: 1.5;
         letter-spacing: 0.04em;
         padding-left: 24px;
-        margin-left: 24px;
+        margin-left: auto;
+        margin-right: auto;
         width: 165px;
         height: 40px;
         border: none;
@@ -595,6 +594,7 @@ margin-bottom: 20px;
         color: var(--white);
         background: var(--title-text-color);
         cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
      }
      .subscribe_icon{
         fill: var(--white);
@@ -795,12 +795,18 @@ margin-bottom: 20px;
 /* ---------------Modification:--------------------- */
 /* ################################################# */
 /* ------------------MOBILE------------------------- */
- .container{
+.container{
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
  }
+ .specially{
+    padding-left: 82px;
+    padding-right: 82px;
+    margin-left: auto;
+    margin-right: auto;
+} 
 @media screen and (min-width: 440px) {
     .container{
         width: 428px;
@@ -810,8 +816,16 @@ margin-bottom: 20px;
 /* --------------------TABLE-------------------------- */
 @media screen and (min-width: 768px) {
    .container{
+    padding-left: 16px;
+    padding-right: 16px;
     width: 768px; 
 }
+.specially{
+    padding-left: 108px;
+    padding-right: 108px;
+    margin-left: auto;
+    margin-right: auto;
+} 
 .menu_button{
     display: none;
 }
@@ -835,19 +849,14 @@ margin-bottom: 20px;
     background-color: var(--hover-fokus-color);
 }
 .header-item{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
     color: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current{
     color: var(--hover-fokus-color);
 }
-.header-nav .header-item:hover,
-.header-nav .header-item:focus{
-    color: var(--hover-fokus-color);
- }
     .header-list{
         display: flex;
         margin-left: 120px;
@@ -868,11 +877,6 @@ margin-bottom: 20px;
 .contacts-address{
     font-style: normal;
 }
-.contacts .contact-li:hover,
-.contacts .contact-li:focus{
-    color: var(--hover-fokus-color);
-}
-
     .contacts{
         display: flex;
         flex-direction: column;
@@ -882,8 +886,7 @@ margin-bottom: 20px;
         font-size: 12px;
         line-height: 1.16;
         letter-spacing: 0.04em;
-        color: var(--primary-text-color);
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color: var(--accent-color);
         }
   /*--------------- Main banner-------------------- */
     .banner{
@@ -915,34 +918,102 @@ margin-bottom: 20px;
 .guality-company{
     text-align: start;
 }
+.about-company{
+    gap: 72px 24px;
+}
 .company_li{
     width: calc((100% - 24px) / 2);
 }
-}
 /* ---------------Our team------------------------- */
+.team_ul{
+    gap: 72px 24px;
+}
+.our_team_li{
+    width: calc((100% - 24px) / 2);
+}
 /* ---------------Customers------------------------ */
+.customers{
+    padding-right: 108px;
+    padding-left: 108px;
+}
+.our-customers{
+    gap: 72px 24px;
+}
+.box{
+    width: calc((100% - 48px) / 3);
+} 
 /* -----------------Footer------------------------- */
+.logo-soc{
+    padding-left: 108px;
+    padding-right: 108px;
+    gap: 24px;
+    }
+    .footer-container{
+    text-align: start;
+    width: 264px;
+    padding-left: unset;
+    padding-right: unset;
+    }
+    .footer-soc{
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: 0;
+    }
+    .title-footer-soc{
+    text-align: start;
+    }
+    .footer-sub-box{
+    margin-left: unset;
+    margin-right: auto;
+    }
+    .title-lab{
+        margin-left: unset;
+    }
+    .footer-input{
+    width: 264px;
+    }
+    .footer-sub-form{
+    flex-direction: row;
+    gap: 0;
+    }
+    .footer_buttom{
+    margin-left: 24px;
+    }
+}
 /* ##################################################### */
 /* -------------------DESKTOP------------------------- */
 @media screen and (min-width: 1200px) {
     .container{
         width: 1158px;
-        padding: 0;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .section{
         padding-top: 120px;
         padding-bottom: 120px;
-        border: 1px solid red;
     }
     .contacts .item + .item{
     margin-left: 40px;
 }
-.main-nav{
+/* .main-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+} */
+.header-item{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-list{
+.header-nav .header-item:hover,
+.header-nav .header-item:focus{
+    color: var(--hover-fokus-color);
+ }
+ .header{
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .header-list{
     margin-left: 76px;
 }
 .contacts{
@@ -956,17 +1027,22 @@ margin-bottom: 20px;
     color: var(--primary-text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .contacts .contact-li:hover,
+.contacts .contact-li:focus{
+    color: var(--hover-fokus-color);
+}
 /* ----------------Main banner---------------------- */
     .banner{
         width: 100%;
         background-color: var(--accent-color);
         background-image: var(--grad), url(../images/banner-d.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         padding-top: 188px;
         padding-bottom: 188px;
     }
+    .banner .banner-btn:hover,
+    .banner .banner-btn:focus{
+background-color: var(--hover-fokus-color);
+}
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -996,7 +1072,14 @@ margin-bottom: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
     }
-
+    .guality-comp-descr{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        width: 100%;
+        color: var(--primary-text-color)
+    }
 /* ------------What are we doing-------------------*/
     .doing{
         display: flex;
@@ -1008,20 +1091,64 @@ margin-bottom: 20px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-transform: capitalize;
+        margin-bottom: 72px;
     }
     .doing-imgs{
         display: flex;
         justify-content: center;
         gap: 24px;
     } 
-}
 /* ---------------Our team------------------------- */
 .team_ul{
+    flex-wrap: nowrap;
     gap: 24px;
 }
 .our_team_li{
     width: calc((100% - 72px) / 4);
 }
-/* ---------------Customers------------------------ */
-/* -----------------Footer------------------------- */
-
+.team-soc-link:hover{
+    background-color: var(--hover-fokus-color);
+}
+/*----------------- Customers--------------------- */
+.our-customers{
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+.box{
+    width: calc((100% - 120px) / 6);
+}
+.customer-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.box-icon:hover{
+    border-color: var(--hover-fokus-color);
+}
+.box-icon:hover .customer-icon{
+    fill: var(--hover-fokus-color)
+}
+/*------------------ Footer----------------------- */
+.logo-soc{
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+.footer-container{
+width: 264px;
+margin-bottom: 0;
+}
+.footer-soc{
+margin-left: 120px;
+}
+.footer-soc-link:hover{
+    background-color: #31D0AA;
+}
+.footer-sub-box{
+    margin-left: auto;
+    margin-right: unset;
+}
+.footer-sub-box .footer_buttom:hover,
+.footer-sub-box .footer_buttom:focus{
+    background-color: var(--hover-fokus-color);
+}
+}
